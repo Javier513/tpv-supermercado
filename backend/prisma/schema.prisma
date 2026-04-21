@@ -8,13 +8,14 @@ datasource db {
 }
 
 model Usuario {
-  id          BigInt    @id @default(autoincrement())
-  username    String    @unique
+  id            BigInt    @id @default(autoincrement())
+  username      String    @unique
   password_hash String
-  role        Role      @default(client)
-  nombre      String
-  activo      Boolean   @default(true)
-  created_at  DateTime  @default(now())
+  role          Role
+  nombre        String
+  activo        Boolean   @default(true)
+  created_at    DateTime  @default(now())
+  privilegios   String    @default("solo lectura")
 
   @@map("usuarios")
 }

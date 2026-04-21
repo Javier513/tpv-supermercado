@@ -1,5 +1,21 @@
-node_modules
-# Keep environment variables out of version control
-.env
+# Node.js
+node_modules/
+dist/
+build/
 
-/generated/prisma
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# Prisma
+prisma/migrations/
+# No subir el cliente generado (se genera con prisma generate)
+
+# OS
+.DS_Store
+Thumbs.db
