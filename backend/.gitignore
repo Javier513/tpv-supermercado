@@ -1,4 +1,4 @@
-# Node.js
+# Dependencies
 node_modules/
 dist/
 build/
@@ -7,15 +7,36 @@ build/
 .env
 .env.local
 .env.production
+.env.development
 
 # Logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Prisma
 prisma/migrations/
-# No subir el cliente generado (se genera con prisma generate)
+# No subir el cliente generado (se regenera con "npx prisma generate")
 
-# OS
+# Runtime data
+*.sqlite
+*.sqlite3
+
+# OS generated files
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+
+# IDE files
+.vscode/
+.idea/
+
+# Frontend specific
+frontend/.env
+frontend/dist/
+
+# Backend specific
+backend/.env
+backend/dist/
